@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,12 +19,23 @@
             object-fit: cover;
         }
 
+        body {
+            background: url({% static 'images/Background.png'%}) no-repeat center center fixed;
+            -webkit-background-size:cover;
+            -moz--background-size:cover;
+            -o--background-size:cover;
+            background-size: cover;
+
+        }
+
     </style>
 <body class="m-5">
 
     <div class="container">
         <div class="row">
             <div class="col-md-3">
+
+                <a href="{% url 'index' %}" class="btn btn-dark my-3"> Home </a>
 
                 <div class="card">
                     <div class="card-header">
@@ -36,8 +48,8 @@
 
                       {% for category in categories %}
                       <li class="list-group-item">
-                        <a href="{% url 'gallery' %}?category={{category.name}}" >{{category.name}} </a>
-
+                        <a href="{% url 'gallery' %}?category={{category.name}}" >{{category.name}} 
+                        </a>
                         </li>
                       {% endfor %}
 

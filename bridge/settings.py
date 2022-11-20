@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     
     # Own apps
     'bridge_home',
-    'pictures',
     'chat',
     'channels',
     'photos.apps.PhotosConfig',

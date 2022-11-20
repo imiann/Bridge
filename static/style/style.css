@@ -1,0 +1,238 @@
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+}
+
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
+
+h1 {
+    color: rgb(43, 5, 43);
+    font-size: calc(5rem + 6vw);
+    display: flex;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.logo {
+    display: flex;
+    width: 13%;
+    height: 9.5%;  
+    margin-top: calc(0.2rem + 1vh);
+    margin-left: calc(0.2rem + 1vh);
+
+}
+
+
+.sideBtn {
+    border-width: 0px;
+    background-color: transparent;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* width: 100%; */
+    /* height: 3vw; */
+    font-size: calc(0.2rem + 2.2vw);
+    margin-top: calc(0.2rem + 2.5vh);
+    margin-bottom: calc(0.2rem + 2.5vh);
+    transition: 450ms ease-in-out;
+
+}
+
+.sideBtn:hover {
+    /* transform: scale(1.05) */
+    background-color: beige;
+    border-radius: 1rem;
+    border-color: black;
+    /* border-width: 0.1rem; */
+}
+
+
+.dropdown__menu {
+    display: block;
+    margin-left: 1vw;
+    transition: all 250ms;
+    position: absolute;
+    max-height: 50%;
+    overflow: hidden;
+}
+
+
+.dropdown__btn{
+    display: flex;
+    font-size: calc(0.2rem + 4vw);
+    /* width: 25%; */
+    /* height: 5.5vh; */
+    margin-top: 5vh;
+    margin-left: 1vw;
+    transition: 450ms ease-in-out;
+}
+
+.hide {
+    max-height: 0;
+    opacity: 0;
+}
+
+
+
+
+/* Split the screen in half */
+.split {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+}
+
+/* Control the left side */
+.left {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: burlywood;
+    flex-direction: column;
+}
+
+/* Control the right side */
+.right {
+    width: 85%;
+    right: 0;
+    background-color: #F3E9DC;
+
+}
+
+#photo__btn {
+    display: flex;
+    width: 95.5%;
+    height: 75%;
+    object-fit: cover;
+    border-radius: 2rem;
+    margin: 1vw;
+    transition: 450ms ease-in-out;
+}
+
+#photo__btn:hover {
+    transform: scale(1.02);
+}
+
+.fade {
+    animation: fadeIn 1500ms;
+}
+
+
+@keyframes fadeIn {
+    from {width: 0%;}
+    to {width: 85%;}
+}
+
+
+/* MESSAGE POP UP STYLE */
+
+.message {
+    display: flex;
+    flex-direction: row;
+    width: 95.5%;
+    height: 15%;
+    margin: 1vw;
+    border-radius: 2rem;
+    background-color: wheat;
+    transition: 450ms ease-in-out;
+    
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: break-word;
+
+    /* Does the magic */
+    overflow :hidden;
+    /* white-space: pre-wrap; */
+    
+    text-overflow: ellipsis " [..]";
+}
+
+.message:hover {
+    transform: scale(1.02);
+}
+
+.profile__span {
+    width: 25%;
+}
+
+.vertical__center {
+    display: flex;
+    align-items: center;
+}
+
+
+#message__picture {
+    object-fit: cover;
+    border-radius: 10rem;
+    width: 5vw;
+    height: 5vw;
+    flex-shrink: 0;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#new__message {
+    margin-left: 1vw;
+    margin-right: 0.75vw;
+    
+}
+
+
+.main {
+    position: fixed;
+}
+
+.left__section {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+}
+
+.right__section {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+}
+
+#countdown__btn {
+    display: flex;
+    width: 95.5%;
+    height: 45%;
+    object-fit: cover;
+    border-radius: 2rem;
+    margin: 1vw;
+    transition: 450ms ease-in-out;
+}
+
+#countdown__btn:hover {
+    transform: scale(1.02);
+}
+
+#todo__btn {
+    display: flex;
+    width: 95.5%;
+    height: 45%;
+    object-fit: cover;
+    border-radius: 2rem;
+    margin: 1vw;
+    transition: 450ms ease-in-out;
+}
+
+#todo__btn:hover {
+    transform: scale(1.02);
+}
