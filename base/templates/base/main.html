@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script src="https://kit.fontawesome.com/8e3936d6df.js" crossorigin="anonymous"></script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Plan it Out!</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    
+
+        <style>
+            body{
+                background-color:#ebb8ae;
+                font-family: 'Quicksand', sans-serif;
+                padding-top: 50px;
+            }
+
+
+            h1,h2,h4,h5,h6{font-family: 'Quicksand', sans-serif;}
+
+            h3{
+                margin-left: 8.5px;
+                margin-bottom: 8.5px;
+                justify-content: space-around;
+                
+                font-family: 'Quicksand', sans-serif;
+            }
+
+
+            a,p {color: #291700}
+
+
+            .container{
+                max-width: 550px;
+                margin: auto;
+                background-color: #efd7d7;
+                -webkit-box-shadow: 8px 8px 8px -4px rgba(0, 0, 0, 0.21);
+                box-shadow: 8px 8px 8px -4px rgba(0, 0, 0, 0.21);
+                border-radius: 0 0 5px 5px;
+            }
+
+            .header-bar {
+                display: flex;
+                color: #ffffff;
+                padding: 10px;
+                border-radius: 5px 5px 0 0;
+                background: linear-gradient(90deg, #de506c 0%, #e3888d 100%);
+            }
+
+            .header-bar a {
+                color: rgb(247, 247, 247);
+                text-decoration: none;
+            }
+
+            .plan-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px;
+                background-color:#efd7d7;
+                border-top: 1px solid rgb(188, 161, 161);
+            }
+            
+            .plan-title {
+                display: flex;
+            }
+
+            .plan-title a {
+                text-decoration: none;
+                color:#291700;
+                margin-left: 10px;
+            }
+
+            .plan-complete-icon {
+                height: 20px;
+                width: 20px;
+                background-color: rgb(145, 210, 146);
+                border-radius: 50%;
+            }
+
+            .plan-incomplete-icon {
+                height: 20px;
+                width: 20px;
+                background-color: #a69b9b;
+                border-radius: 50%;
+            }
+
+            .delete-link{
+                text-decoration: none;
+                font-weight: 900;
+                color:#de506c;
+                font-size: 22px;
+                line-height: 0;
+            }
+
+            #search-add-wrapper {
+                color:#de506c;
+                display: flex;
+                margin-right: 8.5px;
+                justify-content:space-between;
+                align-items: center;
+                padding:10px;
+            }
+
+            #add-link {
+                color:#de506c;
+                text-decoration: none;
+                font-size: 42px;
+                text-shadow: 1px 1px #852d3f 
+            }
+
+            input[type=text],
+            textarea {
+                border: 1px solid #de506c;
+                border-radius: 5px;
+                padding: 10px;
+                width: 90%;
+            }
+
+            label {
+                padding-top: 10px !important;
+                display: block;
+            }
+
+            .button {
+                border: 1px solid #de506c;
+                background-color: #efd7d7;
+                color: #EB796F;
+                padding: 10px;
+                font-size: 14px;
+                border-radius: 5px;
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            .card-body{
+                padding: 20px;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <a href="{% url 'index' %}" class="button"> Home </a>
+        
+
+        <div class="container">
+            {% block content %}
+
+            {% endblock content %}
+        </div>
+        
+    </body>
+</html>
