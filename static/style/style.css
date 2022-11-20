@@ -1,12 +1,20 @@
 body {
     width: 100%;
     height: 100%;
-    background-color: grey;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
 }
 
+a:link { text-decoration: none; }
 
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
 
 h1 {
     color: rgb(43, 5, 43);
@@ -14,6 +22,15 @@ h1 {
     display: flex;
     margin-top: 0px;
     margin-bottom: 0px;
+}
+
+.logo {
+    display: flex;
+    width: 13%;
+    height: 9.5%;  
+    margin-top: calc(0.2rem + 1vh);
+    margin-left: calc(0.2rem + 1vh);
+
 }
 
 
@@ -93,11 +110,12 @@ h1 {
     width: 85%;
     right: 0;
     background-color: #F3E9DC;
+
 }
 
-#photo-btn {
+#photo__btn {
     display: flex;
-    width: 50%;
+    width: 95.5%;
     height: 75%;
     object-fit: cover;
     border-radius: 2rem;
@@ -105,7 +123,7 @@ h1 {
     transition: 450ms ease-in-out;
 }
 
-#photo-btn:hover {
+#photo__btn:hover {
     transform: scale(1.02);
 }
 
@@ -125,12 +143,13 @@ h1 {
 .message {
     display: flex;
     flex-direction: row;
-    width: 50%;
+    width: 95.5%;
     height: 15%;
     margin: 1vw;
     border-radius: 2rem;
     background-color: wheat;
     transition: 450ms ease-in-out;
+    
     word-wrap: break-word;
     white-space: pre-wrap;
     word-break: break-word;
@@ -156,7 +175,7 @@ h1 {
 }
 
 
-#message-picture {
+#message__picture {
     object-fit: cover;
     border-radius: 10rem;
     width: 5vw;
@@ -166,8 +185,54 @@ h1 {
     margin-right: 10%;
 }
 
-#new-message {
+#new__message {
     margin-left: 1vw;
     margin-right: 0.75vw;
     
+}
+
+
+.main {
+    position: fixed;
+}
+
+.left__section {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+}
+
+.right__section {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+}
+
+#countdown__btn {
+    display: flex;
+    width: 95.5%;
+    height: 45%;
+    object-fit: cover;
+    border-radius: 2rem;
+    margin: 1vw;
+    transition: 450ms ease-in-out;
+}
+
+#countdown__btn:hover {
+    transform: scale(1.02);
+}
+
+#todo__btn {
+    display: flex;
+    width: 95.5%;
+    height: 45%;
+    object-fit: cover;
+    border-radius: 2rem;
+    margin: 1vw;
+    transition: 450ms ease-in-out;
+}
+
+#todo__btn:hover {
+    transform: scale(1.02);
 }
