@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bridge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    
+    <div class="split left" id="leftWindow">
+        
+        <h1>Br</h1>
+        <div class="dropdown">
+            <button class="sideBtn dropdown__btn">Menu</button>
+            <div class="dropdown__menu hide">
+                <button class="sideBtn" onclick="showRight()">Chat</button>
+                <button class="sideBtn" onclick="showRight()">Photos</button>
+                <button class="sideBtn" onclick="showRight()">Calendar</button>
+                <button class="sideBtn" onclick="showRight()">Plans</button>
+                <button class="sideBtn" onclick="showRight()">Zodiac</button>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="main split right fade" id="rightWindow">
+        <div class="left__section">
+            <img id="photo__btn" src="IMG_2730.JPEG" alt="picture">
+            <div class="message">
+                <span class="vertical__center profile__span" >
+                    <img id="message__picture" src="IMG_2730.JPEG" alt="picture">
+                </span>
+                <h3 id="new__message">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem sapiente hic corrupti quas provident perspiciatis accusamus voluptas aspernatur culpa ex ratione a eum, mollitia excepturi architecto rem aut iusto velit!</h3>
+            </div>
+        </div>
+
+        <div class="right__section">
+            <img id="countdown__btn" src="IMG_2730.JPEG" alt="picture">
+            <img id="todo__btn" src="IMG_2730.JPEG" alt="picture">
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
