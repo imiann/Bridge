@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bridge</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'style/style.css' %}">
+</head>
+<body>
+    
+    
+    <div class="split left" id="leftWindow">
+        
+        <h1>Br</h1>
+        <div class="dropdown">
+            <button class="sideBtn dropdown__btn">Menu</button>
+            <div class="dropdown__menu hide">
+                <a href="{% url 'gallery' %}"><button class="sideBtn">Chat</button></a>
+                <button class="sideBtn" onclick=>Photos</button>
+                <button class="sideBtn" onclick="showRight()">Calendar</button>
+                <button class="sideBtn" onclick="showRight()">Plans</button>
+                <button class="sideBtn" onclick="showRight()">Zodiac</button>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="split right fade" id="rightWindow">
+        <img id="photo-btn" src="https://www.rd.com/wp-content/uploads/2021/04/GettyImages-988013222-scaled-e1618857975729.jpg" alt="picture">
+        <div class="message">
+            <span class="vertical__center profile__span" >
+                <img id="message-picture" src="https://www.rd.com/wp-content/uploads/2021/04/GettyImages-988013222-scaled-e1618857975729.jpg" alt="picture">
+            </span>
+            <h3 id="new-message">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem sapiente hic corrupti quas provident perspiciatis accusamus voluptas aspernatur culpa ex ratione a eum, mollitia excepturi architecto rem aut iusto velit!</h3>
+        </div>
+
+
+    </div>
+
+
+    <script src="{% static 'style/script.js'%}"></script>
+</body>
+</html>

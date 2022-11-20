@@ -5,6 +5,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+    path('', include('bridge_home.urls')),
     path('admin/', admin.site.urls),
     path('chat/', include('chat.urls')),
     path('photos/', include('photos.urls')),

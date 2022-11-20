@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +17,15 @@
         .image-thumbnail {
             height: 200px;
             object-fit: cover;
+        }
+
+        body {
+            background: url({% static 'images/Background.png'%}) no-repeat center center fixed;
+            -webkit-background-size:cover;
+            -moz--background-size:cover;
+            -o--background-size:cover;
+            background-size: cover;
+
         }
 
     </style>
@@ -36,8 +46,8 @@
 
                       {% for category in categories %}
                       <li class="list-group-item">
-                        <a href="{% url 'gallery' %}?category={{category.name}}" >{{category.name}} </a>
-
+                        <a href="{% url 'gallery' %}?category={{category.name}}" >{{category.name}} 
+                        </a>
                         </li>
                       {% endfor %}
 
