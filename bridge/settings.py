@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'chat',
     'channels',
     'photos.apps.PhotosConfig',
+    'base.apps.BaseConfig',
 ]
 
 MIDDLEWARE = [

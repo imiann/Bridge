@@ -1,0 +1,52 @@
+{% extends 'base/main.html' %}
+{% block content%}
+
+
+<div class="header-bar">
+    <div>
+        <h1> Hey There!</h1>
+        <h3 style="margin:0">  Check out your <i>{{count}}</i> amazing plans </h3>
+    </div>
+</div>
+
+<div id="search-add-wrapper">
+    <form method="GET" style="margin-top: 20px; display: flex">
+        <input type="text" name="search-area" value="{{search_input}}">
+        <input class="button" type="submit" value="Search">
+    </form>
+    <a id="add-link" href="{% url 'plan-create' %}">&#x2b;</a>
+</div>
+
+
+<div class="plan-items-wrapper">
+    {% for plan in plans %}
+    <div class="plan-wrapper">
+        {% if plan.complete %}
+        <div class="plan-title">
+            <div class="plan-complete-icon"></div>
+
+            <i><s><a href="{% url 'update-plan' plan.id %}">{{plan}}</a></s></i>
+
+        </div>
+
+        {% else %}
+        <div class="plan-title">
+            <div class="plan-incomplete-icon"></div>
+
+            <a href="{% url 'update-plan' plan.id %}">{{plan}}</a>
+
+        </div>
+        {% endif %}
+        <a class = 'delete-link' href = "{% url 'delete-plan' plan.id %}"><i class="fa-solid fa-trash"></i></a>
+
+    </div>
+
+    {% empty %}
+    <h3>No plans yet!</h3>
+    {% endfor %}
+
+</div>
+
+{% endblock content %}
+
+

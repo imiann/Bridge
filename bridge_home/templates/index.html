@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <title>Bridge</title>
     {% load static %}
 
@@ -22,7 +23,7 @@
                 <a href="{% url 'index' %}"><button class="sideBtn">Chat</button></a>
                 <a href="{% url 'gallery' %}"><button class="sideBtn">Photos</button></a>
                 <button class="sideBtn" onclick="showRight()">Calendar</button>
-                <button class="sideBtn" onclick="showRight()">Plans</button>
+                <a href="{% url 'plans' %}"><button class="sideBtn">Plans</button></a>
                 <button class="sideBtn" onclick="showRight()">Zodiac</button>
             </div>
         </div>
@@ -36,13 +37,13 @@
                 <span class="vertical__center profile__span" >
                     <img id="message__picture" src="https://drscdn.500px.org/photo/1037770897/m%3D900/v2?sig=1c10315acab43c9975d918ff90b42fc1acd6c3f29a1e15f63c88e6c271a08563" alt="picture">
                 </span>
-                <h3 id="new__message">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem sapiente hic corrupti quas provident perspiciatis accusamus voluptas aspernatur culpa ex ratione a eum, mollitia excepturi architecto rem aut iusto velit!</h3>
+                <h3 id="new__message">I miss you!</h3>
             </div>
         </div>
 
         <div class="right__section">
-            <img id="countdown__btn" src="https://img.freepik.com/premium-vector/coming-soon-countdown-timer-template-website_6735-1288.jpg?w=2000" alt="picture">
-            <img id="todo__btn" src="https://cdn-icons-png.flaticon.com/512/1/1560.png" alt="picture">
+            <img id="countdown__btn" src="https://assets.website-files.com/5ed94b01395711aff7968403/6126fdcdcc31ef5c4fceee7d_Screen%20Shot%202021-08-26%20at%202.34.03%20PM.png" alt="picture">
+            <a href="{% url 'plans' %}"><img id="todo__btn" src="{% static 'images/planning.png' %}" alt="picture"></a>
         </div>
 
     </div>
